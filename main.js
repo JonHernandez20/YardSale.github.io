@@ -168,6 +168,56 @@ productList.push({
     price: 245,
     image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
 });
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
+productList.push({
+    name: 'Desk',
+    price: 245,
+    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+});
 
 function renderProducts(arr) {
     for (product of arr) {
