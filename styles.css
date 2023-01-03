@@ -163,10 +163,11 @@
 /* Aside: product detail and car */
 
 aside {
+    position: absolute;
     background-color: var(--white);
     width: 360px;
+    height: 100%;
     box-sizing: border-box;
-    position: absolute;
     right: 0;
   }
 
@@ -196,7 +197,7 @@ aside {
     border-radius: 0 0 20px 20px;
   }
   #productDetail .product-info {
-    margin: 12px 0;
+    margin: 4px 0;
   }
   #productDetail .product-info p:nth-child(1) {
     font-weight: bold;
@@ -237,6 +238,7 @@ aside {
     display: flex;
   }
   .title-container img {
+    width: 12px;
     transform: rotate(180deg);
     margin-right: 14px;
     cursor: pointer;
@@ -319,6 +321,9 @@ aside {
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+}
+.product-card img:hover {
+  cursor: pointer;
 }
 .product-card .product-info {
   display: flex;
