@@ -4,16 +4,16 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const burguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu')
 const cartNav = document.querySelector('.navbar-shopping-cart');
-const prodDetail = document.querySelector('.product-detail');
+const aside = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 //deskttop Menu
 navEmail.addEventListener('click', toggleDeskMenu);
 function toggleDeskMenu() {
-    const isCLosedDetail = prodDetail.classList.contains('inactive');
+    const isCLosedDetail = aside.classList.contains('inactive');
 
     if(!isCLosedDetail) {
-        prodDetail.classList.add('inactive');
+        aside.classList.add('inactive');
     }
     desktopMenu.classList.toggle('inactive');
 }
@@ -21,10 +21,10 @@ function toggleDeskMenu() {
 // Burguer Menu Mobile
 burguerMenu.addEventListener('click', togglemobMenu);
 function togglemobMenu () {
-    const isClosedDetail = prodDetail.classList.contains('inactive');
+    const isClosedDetail = aside.classList.contains('inactive');
 
     if(!isClosedDetail) {
-        prodDetail.classList.add('inactive');
+        aside.classList.add('inactive');
     }
     mobileMenu.classList.toggle('inactive');
 }
@@ -43,7 +43,7 @@ function toggleCart () {
         desktopMenu.classList.add('inactive');
     }
     
-    prodDetail.classList.toggle('inactive');
+    aside.classList.toggle('inactive');
 }
 
 // Product array var
