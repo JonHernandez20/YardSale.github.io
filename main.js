@@ -149,83 +149,83 @@ productList.push({
 });
 productList.push({
     name: 'Earphones',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    price: 25,
+    image: 'https://i.pinimg.com/236x/11/4a/dd/114addd8f455f6374d5545028def932b.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Terreneitor',
+    price: 30,
+    image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSLNKuaVtwWmS2zPIem9tZTTsGoVLrZgku5gcDj1Q8TCZuM9ySf_8RxQf1bgPBRQIHJPPVyeeZiBfk7zLLqtg1gM7oLnu465veKyyPso2kQQWi_12yin6KGew&usqp=CAE'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Drone',
+    price: 80,
+    image: 'https://i.pinimg.com/236x/b5/d4/32/b5d4327128dd905e923fa126f71c90ed.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Hidrogel',
+    price: 41,
+    image: 'https://i.pinimg.com/236x/b3/1a/5d/b31a5d06e45989d6c9dbdb0698fde56b.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Ball of wordl',
+    price: 207,
+    image: 'https://i.pinimg.com/236x/b2/27/6c/b2276caf672d1c3de9a301dc45def1c5.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'PlayStation 5',
+    price: 777,
+    image: 'https://i.pinimg.com/236x/a5/ca/69/a5ca6910e56d517a80222784e7be3cc7.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Mando PS5',
+    price: 70,
+    image: 'https://i.pinimg.com/236x/68/65/6e/68656e59bc4f5d2de1208ab6c8d5393c.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Vegeta',
+    price: 41,
+    image: 'https://i.pinimg.com/236x/f4/17/a8/f417a856e0ebb66ba1e5c0fa86683f68.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Repisa',
+    price: 414,
+    image: 'https://i.pinimg.com/236x/a7/25/c0/a725c01869bfb4f2fcf63a4618934f1b.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Juego de sillones',
+    price: 777,
+    image: 'https://i.pinimg.com/236x/0e/2d/35/0e2d353629258927c1499fb4e6fc9f0f.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Mesa',
+    price: 260,
+    image: 'https://i.pinimg.com/236x/46/55/44/46554421807d6da4d49bf3bc9d0bce2c.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Zapatera',
+    price: 130,
+    image: 'https://i.pinimg.com/236x/42/37/c6/4237c6b19ea7c53814bac339c64447ce.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Closet',
+    price: 1036,
+    image: 'https://i.pinimg.com/236x/eb/b2/7d/ebb27d8976229ed44730d85e252779b7.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Cazadora',
+    price: 41,
+    image: 'https://i.pinimg.com/236x/d9/7e/2b/d97e2bb5be41b03fd669cab3a8ec4862.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Tenis blancos',
+    price: 466,
+    image: 'https://i.pinimg.com/236x/99/fc/09/99fc09aa02ab19c0f2ca59cf848279e5.jpg'
 });
 productList.push({
-    name: 'Desk',
-    price: 245,
-    image: 'https://i.pinimg.com/736x/99/bb/c1/99bbc15fa7a2cf37cbcec4512b6d75d5.jpg'
+    name: 'Falda',
+    price: 77,
+    image: 'https://i.pinimg.com/236x/ae/0e/e7/ae0ee7fe43c4c7ccceea7fd885930125.jpg'
 });
 
 function renderProducts(arr) {
