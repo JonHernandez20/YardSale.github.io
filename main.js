@@ -9,6 +9,11 @@ const cartNav = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('#shoppingCartContainer');
 const productDetail = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
+// Aside detail product
+const imgDetail = document.querySelector('#infoImage'); // Image
+const priceDetail = document.querySelector('#infoPrice'); // Price
+const nameDetail = document.querySelector('#infoName'); // Name
+
 
 // eventListener
 navEmail.addEventListener('click', toggleDeskMenu);
@@ -52,8 +57,8 @@ function togglemobMenu () {
 // Shopping cart 
 function toggleCart () {
     const isClosedMobile = mobileMenu.classList.contains('inactive');
-    const isClosedEmail = desktopMenu.classList.contains('inactive');
     const isClosedAside = productDetail.classList.contains('inactive');
+    const isClosedEmail = desktopMenu.classList.contains('inactive');
 
     if(!isClosedMobile) {
         mobileMenu.classList.add('inactive');
@@ -61,6 +66,10 @@ function toggleCart () {
     
     if(!isClosedAside) {
         closedDetailProduct();
+    }
+
+    if(!isClosedEmail) {
+        desktopMenu.classList.add('inactive');
     }
     aside.classList.toggle('inactive');
 }
@@ -220,14 +229,34 @@ productList.push({
 });
 
 function renderProducts(arr) {
-    for (product of arr) {
+    for (let product of arr) {
+        
+        // Detail aside product
+        imgDetail.setAttribute('src', product.image);
+        priceDetail.innerText = '$' + product.price;
+        nameDetail.innerText = product.name;
+
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
-    
+
         //Img
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
-        productImg.addEventListener('click', openDetailProduct);
+        productImg.addEventListener('click', () => {
+            const isCLosedDetail = aside.classList.contains('inactive');
+            const isClosedEmail = desktopMenu.classList.contains('inactive');
+
+            if(!isCLosedDetail) {
+                aside.classList.add('inactive');
+            }
+
+            if(!isClosedEmail) {
+                desktopMenu.classList.add('inactive');
+            }
+
+            mostrarProductAside(product.image, product.price, product.name);
+            productDetail.classList.remove('inactive');
+        });
     
         // Info div
         const info = document.createElement('div');
@@ -266,6 +295,12 @@ function renderProducts(arr) {
         // Product card -> cardsContainer
         cardsContainer.appendChild(productCard);
     }
+}
+
+function mostrarProductAside (imagen,precio,nombre) {
+    imgDetail.setAttribute('src', imagen);
+    priceDetail.innerText = '$' + precio;
+    nameDetail.innerText = nombre;
 }
 
 renderProducts(productList);
