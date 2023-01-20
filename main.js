@@ -9,6 +9,9 @@ const cartNav = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('#shoppingCartContainer');
 const productDetail = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
+const shoppingLength = document.querySelector('#shoppingCart'); // Numero de productos en carrito
+const shopProduct = document.querySelector('#allShoppping'); // Precio a pagar en carrito de compras
+
 // Aside detail product
 const imgDetail = document.querySelector('#infoImage'); // Image
 const priceDetail = document.querySelector('#infoPrice'); // Price
@@ -102,6 +105,8 @@ function closedDetailProduct() {
 
 // Product array var
 const productList = [];
+const productShoping = []; // Lista de productos que van a comprar
+
 productList.push({
     name: 'Bike',
     price: 125,
@@ -275,7 +280,21 @@ function renderProducts(arr) {
         const figure = document.createElement('figure');
         const imgFigure = document.createElement('img');
         imgFigure.setAttribute('src', './icons/bt_add_to_cart.svg');
-    
+        imgFigure.addEventListener('click', () => {
+            productShoping.push(product);
+            let all = 0;
+            const n = productShoping.map(prod => {
+                return prod.price; // Me regresa un array con los precios que agregue al carrito
+            })
+            console.log(n);
+            n.forEach(shop => {
+                return all+=shop; // Suma cada precio al que ya tenia.
+            })
+
+            shopProduct.innerText = '$' + all;
+            shoppingLength.innerHTML = productShoping.length;
+        })
+        
         //Appendchild
         // imgFigure -> Figure
         figure.appendChild(imgFigure);
