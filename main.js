@@ -104,9 +104,7 @@ function closedDetailProduct() {
 }
 
 // Product array var
-const productList = [];
-const productShoping = []; // Lista de productos que van a comprar
-
+const productList = []; //const Lista de productos que van a comprar
 productList.push({
     name: 'Bike',
     price: 125,
@@ -233,9 +231,15 @@ productList.push({
     image: 'https://i.pinimg.com/236x/ae/0e/e7/ae0ee7fe43c4c7ccceea7fd885930125.jpg'
 });
 
+// product cart shopping
+
+
+// -- FUNCTIONS --
+
 function renderProducts(arr) {
+    let all = 0;
+    let productShoping = [];
     for (let product of arr) {
-        
         // Detail aside product
         imgDetail.setAttribute('src', product.image);
         priceDetail.innerText = '$' + product.price;
@@ -282,17 +286,18 @@ function renderProducts(arr) {
         imgFigure.setAttribute('src', './icons/bt_add_to_cart.svg');
         imgFigure.addEventListener('click', () => {
             productShoping.push(product);
-            let all = 0;
+            console.log(productShoping);
             const n = productShoping.map(prod => {
                 return prod.price; // Me regresa un array con los precios que agregue al carrito
             })
-            console.log(n);
             n.forEach(shop => {
                 return all+=shop; // Suma cada precio al que ya tenia.
             })
-
+            prodCart(product.name, product.price, product.image);
             shopProduct.innerText = '$' + all;
-            shoppingLength.innerHTML = productShoping.length;
+            shoppingLength.innerHTML = n.length;
+
+            return productShoping;
         })
         
         //Appendchild
@@ -308,18 +313,67 @@ function renderProducts(arr) {
         info.appendChild(figure);
     
         // Product info, img -> product card
-        productCard.append(productImg);
-        productCard.append(info);
+        productCard.appendChild(productImg);
+        productCard.appendChild(info);
     
         // Product card -> cardsContainer
         cardsContainer.appendChild(productCard);
     }
+
+
 }
 
 function mostrarProductAside (imagen,precio,nombre) {
     imgDetail.setAttribute('src', imagen);
     priceDetail.innerText = '$' + precio;
     nameDetail.innerText = nombre;
+}
+
+function prodCart(name, price, urlImg) {
+    // <!-- <div class="shopping-cart">
+    //       <figure>
+    //         <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+    //       </figure>
+    //       <p>Bike</p>
+    //       <p>$30,00</p>
+    //       <img src="./icons/icon_close.png" alt="close">
+    //     </div> -->
+
+    const contentCart = document.querySelector('.container__aside-products');
+
+    /* Creacion de elementos */
+
+    // Container
+    const container = document.createElement('div'); // shopping-cart
+    container.classList.add('shopping-cart');
+    // Figure
+    const figure = document.createElement('figure');
+    // img figure
+    const img = document.createElement('img');
+    img.setAttribute('src', urlImg);
+    // p
+    const nameProduct = document.createElement('p'); // Nombre del producto
+    nameProduct.innerText = name;
+    const priceProduct = document.createElement('p'); // Precio del producto
+    priceProduct.innerText = '$' + price;
+
+    // img
+    const imgIcon = document.createElement('img');
+    imgIcon.setAttribute('src', "./icons/icon_close.png");
+
+    /* Adjuntar elementos */
+
+    // imagen al figure
+    figure.appendChild(img);
+
+    // Elementos al contenedor
+    container.appendChild(figure);
+    container.appendChild(nameProduct);
+    container.appendChild(priceProduct);
+    container.appendChild(imgIcon);
+
+    // Contenedor de productos al contenedor de carritos
+    contentCart.appendChild(container);
 }
 
 renderProducts(productList);
