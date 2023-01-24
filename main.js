@@ -11,6 +11,7 @@ const productDetail = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
 const shoppingLength = document.querySelector('#shoppingCart'); // Numero de productos en carrito
 const shopProduct = document.querySelector('#allShoppping'); // Precio a pagar en carrito de compras
+const btnAdd = document.querySelector('.add-to-cart-button');
 
 // Aside detail product
 const imgDetail = document.querySelector('#infoImage'); // Image
@@ -24,6 +25,7 @@ burguerMenu.addEventListener('click', togglemobMenu);
 cartNav.addEventListener('click', toggleCart);
 iconClose.addEventListener('click', closedDetailProduct);
 closeCart.addEventListener('click', closeIconCart);
+btnAdd.addEventListener('click', addProductBtn);
 
 //deskttop Menu
 function toggleDeskMenu() {
@@ -265,7 +267,7 @@ function renderProducts(arr) {
             mostrarProductAside(product.image, product.price, product.name);
             productDetail.classList.remove('inactive');
         });
-    
+
         // Info div
         const info = document.createElement('div');
         info.classList.add('product-info');
@@ -391,5 +393,24 @@ function prodCart(name, price, urlImg, product) {
 
         container.remove();
     })
+}
+
+function addProductBtn() {
+    for (let product of productList) {
+        let all = 0;
+            // returns an array with the prices that you add to the cart
+            productShoping.push(product);
+            const n = productShoping.map(prod => {
+                return prod.price; // Me regresa un array con los precios que agregue al carrito
+            })
+            n.forEach(shop => {
+                return all+=shop; // Suma cada precio al que ya tenia.
+            })
+            prodCart(product.name, product.price, product.image, product);
+            shopProduct.innerText = '$' + all;
+            shoppingLength.innerHTML = productShoping.length;
+
+            return productShoping;
+    }
 }
 renderProducts(productList);
