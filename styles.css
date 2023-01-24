@@ -30,7 +30,9 @@
   }
 
 /* Fusion del menu en Desktop */
-
+  .icon-delete:hover {
+    cursor: pointer;
+  }
   .menu {
     display: none;
     cursor: pointer;

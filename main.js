@@ -235,10 +235,9 @@ productList.push({
 
 
 // -- FUNCTIONS --
-
+let productShoping = [];
 function renderProducts(arr) {
-    let all = 0;
-    let productShoping = [];
+    productShoping = [];
     for (let product of arr) {
         // Detail aside product
         imgDetail.setAttribute('src', product.image);
@@ -285,17 +284,18 @@ function renderProducts(arr) {
         const imgFigure = document.createElement('img');
         imgFigure.setAttribute('src', './icons/bt_add_to_cart.svg');
         imgFigure.addEventListener('click', () => {
+            let all = 0;
+            // returns an array with the prices that you add to the cart
             productShoping.push(product);
-            console.log(productShoping);
             const n = productShoping.map(prod => {
                 return prod.price; // Me regresa un array con los precios que agregue al carrito
             })
             n.forEach(shop => {
                 return all+=shop; // Suma cada precio al que ya tenia.
             })
-            prodCart(product.name, product.price, product.image);
+            prodCart(product.name, product.price, product.image, product);
             shopProduct.innerText = '$' + all;
-            shoppingLength.innerHTML = n.length;
+            shoppingLength.innerHTML = productShoping.length;
 
             return productShoping;
         })
@@ -320,7 +320,7 @@ function renderProducts(arr) {
         cardsContainer.appendChild(productCard);
     }
 
-
+    return productShoping;
 }
 
 function mostrarProductAside (imagen,precio,nombre) {
@@ -329,7 +329,7 @@ function mostrarProductAside (imagen,precio,nombre) {
     nameDetail.innerText = nombre;
 }
 
-function prodCart(name, price, urlImg) {
+function prodCart(name, price, urlImg, product) {
     // <!-- <div class="shopping-cart">
     //       <figure>
     //         <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
@@ -340,6 +340,7 @@ function prodCart(name, price, urlImg) {
     //     </div> -->
 
     const contentCart = document.querySelector('.container__aside-products');
+    let all = 0;
 
     /* Creacion de elementos */
 
@@ -360,7 +361,8 @@ function prodCart(name, price, urlImg) {
     // img
     const imgIcon = document.createElement('img');
     imgIcon.setAttribute('src', "./icons/icon_close.png");
-
+    imgIcon.classList.add('icon-delete');
+    
     /* Adjuntar elementos */
 
     // imagen al figure
@@ -374,6 +376,20 @@ function prodCart(name, price, urlImg) {
 
     // Contenedor de productos al contenedor de carritos
     contentCart.appendChild(container);
-}
+    imgIcon.addEventListener('click', ()=>{
+        const index = productShoping.indexOf(product);
+        productShoping.splice(index, 1);
+        const arrayPrice = productShoping.map(prod => {
+            return prod.price; // returns an array with the prices that you add to the cart
+        });
+        arrayPrice.forEach(shop => {
+            return all+=shop; // Add up earch price you already had
+        });
 
+        shoppingLength.innerHTML = productShoping.length;
+        shopProduct.innerText = '$' + all;
+
+        container.remove();
+    })
+}
 renderProducts(productList);
